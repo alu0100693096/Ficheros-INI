@@ -41,7 +41,7 @@ function tokensToString(tokens) {
 
 function lexer(input) {
   var blanks         = /^\s+/;
-  var iniheader      = /^\[([^\]\r\n]+)\]/;
+  var iniheader      = /^\[([^\s]+)\](?=\s+)/;
   var comments       = /^[;#](.*)/;
   var nameEqualValue = /^([^=;\r\n]+)=([^;\r\n]*)/;
   var any            = /^(.|\n)+/;
