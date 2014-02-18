@@ -43,7 +43,7 @@ function lexer(input) {
   var blanks         = /^\s+/;
   var iniheader      = /^\[([^\t\n]+)\](?=\s+)/;
   var comments       = /^[;#](.*)/;
-  var nameEqualValue = /^([^=;\r\n]+)=([^;\r\n\\]*)(?:(?:\\\n([^;\r\n]*))+|\s*)/;
+  var nameEqualValue = /^([^=;\r\n]+)=([^;\r\n]*)/;
   var any            = /^(.|\n)+/;
 
   var out = [];
