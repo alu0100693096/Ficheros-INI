@@ -10,6 +10,7 @@ $(document).ready(function() {
    var dropZone = document.getElementById('dragdrop');
    dropZone.addEventListener('drop', handleFileSelect, false);
    dropZone.addEventListener('dragover', handleDragOver, false);
+   dropZone.addEventListener('dragleave', handleDragLeave, false);
    //-------------
    $("#fileinput").change(calculate);
 });
@@ -84,6 +85,12 @@ function handleDragOver(evt) {
     evt.stopPropagation();
     evt.preventDefault();
     evt.target.style.background = "lightblue";
+}
+
+function handleDragLeave(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    evt.target.style.background = "white";
 }
 //-------
 
