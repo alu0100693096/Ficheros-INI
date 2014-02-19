@@ -14,7 +14,7 @@ function calculate(evt) {
       var contents = e.target.result;
       
       var tokens = lexer(contents);
-      var pretty = tokensToString(tokens);
+	  var pretty = tokensToString(tokens);
       
       out.className = 'unhidden';
       initialinput.innerHTML = contents;
@@ -26,17 +26,15 @@ function calculate(evt) {
   }
 }
 
-var temp = '<li> <span class = "<%= token.type %>"> <%= match %> </span>\n';
-
 function tokensToString(tokens) {
-   var r = '';
+   var output_template = _.template(template_outList.innerHTML);
+   var matches = [];
+   
    for(var i in tokens) {
-     var t = tokens[i];
-     var s = JSON.stringify(t, undefined, 2);
-     s = _.template(temp, {token: t, match: s});
-     r += s;
+	 matches.push(JSON.stringify(tokens[i], undefined, 2));
    }
-   return '<ol>\n'+r+'</ol>';
+
+   return output_template({tokens: tokens, matches: matches});
 }
 
 function lexer(input) {
@@ -77,3 +75,4 @@ function lexer(input) {
   }
   return out;
 }
+
