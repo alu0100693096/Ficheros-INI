@@ -39,6 +39,7 @@ table.table_out {
     
   /*text-align: center;*/
   min-width: 1400px;
+  max-width: 1400px;
   
   border-spacing: 8px;
   border-collapse: separate;
@@ -52,6 +53,8 @@ table.table_out td.output_content {
    border-style: none;
    background-color: white;
    border-radius: 20px;
+   max-width: 2000px;
+   overflow-x: auto;
 }
 
 table.table_out td.input_content {
@@ -60,6 +63,8 @@ table.table_out td.input_content {
    background-color: white;
    border-radius: 20px;
    text-shadow: rgba(0, 0, 0, 0.15) 0.1em 0.1em 0.2em;
+   max-width: 2000px;
+   overflow-x: auto;
 }
 
 
