@@ -27,16 +27,36 @@ table        { border: inset; border-color: white; }
 .unhidden    { display: block; }
 table.center { margin-left:auto; margin-right:auto; }
 #result      { border-color: red; }
-tr.error       { background-color: red; }
+tr.error     { background-color: red; }	
 pre.output   { background-color: white; }
-/*
-span.repeated { background-color: red }
-span.header { background-color: blue }
-span.comments { background-color: orange }
-span.blanks { background-color: green }
-span.nameEqualValue { background-color: cyan }
-span.error { background-color: red }
-*/
+
+ol.ol_output {color: black; font-weight: bold; margin: 20px;}
+li {border-radius: 10px 10px 10px 10px; padding: 15px 15px 15px 15px;}
+
+li.repeated                    { background-color: #ff9a9a; } 
+li.repeated:hover              { background-color: #ff0000; } 
+li.repeated:hover span         {  color: white;}
+
+li.header                      {  background-color: #e6efff; }
+li.header:hover                {  background-color: #005aff;}
+li.header:hover span           {  color: white;}
+
+li.comments                    {  background-color: #ffead5; }
+li.comments:hover              {  background-color: #f37d0a;}
+li.comments:hover span        {  color: white;}
+
+li.blanks                      {  background-color: #ebffd5; }
+li.blanks:hover                {  background-color: #63bc03;}
+li.blanks:hover span           {  color: white;}
+
+li.nameEqualValue              {  background-color: #d5fffb; }
+li.nameEqualValue:hover        {  background-color: #0dd7c2;}
+li.nameEqualValue:hover span   {  color: white;}
+
+li.error                       {  background-color: #ff9a9a; }
+li.error:hover                 {  background-color: #ff0000;}
+li.error:hover span            {  color: white;}
+
 body
 {
  background-color:#b0c4de;  /* blue */
