@@ -19,17 +19,19 @@
 <script type="text/html" id="template_outList">
 <ol class="ol_output"> <% _.each(tokens, function(token, index){ %> <li class = "<%= token.type %>"> <span> <%= matches[index] %> </span></li> <% }); %> </ol>
 </script>
-  
-    <h1>INI files</h1>
-    <input type="file" id="fileinput" />
+    <table class="table_out">
+      <tr><td><h1>INI files</h1></td></tr>
+      <tr><td><input type="file" id="fileinput" /></td></tr>
+	</table>
+	
     <div id="out" class="hidden">
-    <table>
+    <table class="table_out">
       <tr><th>Original</th><th>Tokens</th></tr>
       <tr>
-        <td>
+        <td class="input_content">
           <pre class="input" id="initialinput"></pre>
         </td>
-        <td class="td_output">
+        <td class="content">
           <pre class="output" id="finaloutput"></pre>
         </td>
       </tr>
