@@ -19,10 +19,12 @@
 <script type="text/html" id="template_outList">
 <ol class="ol_output"> <% _.each(tokens, function(token, index){ %> <li class = "<%= token.type %>"> <span> <%= matches[index] %> </span></li> <% }); %> </ol>
 </script>
+
+    <!-- Contenido principal del documento -->
     <table class="table_out">
-      <tr><td><h1>INI files</h1></td></tr>
-      <tr><td> <div class="input" id="dragdrop">Drop file here...</div></td></tr>
-      <tr><td><input type="file" id="fileinput" /></td></tr>
+      <tr><td><h1>Ficheros INI</h1></td></tr>
+      <tr><td> <div class="input" id="dragdrop"><br>Arrastre el fichero aquí...</div></td></tr>
+      <tr><td><br><input type="file" id="fileinput" /></td></tr>
     </table>
     <div id="out" class="hidden">
     <table class="table_out">
