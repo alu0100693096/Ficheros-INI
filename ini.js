@@ -84,7 +84,7 @@ function handleFileSelect(evt) {
 function handleDragOver(evt) {
     evt.stopPropagation();
     evt.preventDefault();
-    evt.target.style.background = "lightblue";
+    evt.target.style.background = "#c9e8f3";
 }
 
 function handleDragLeave(evt) {
