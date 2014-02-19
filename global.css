@@ -10,6 +10,19 @@ body
  background-color: #f1f1f1;
 }
 
+#dragdrop {
+	width: 425px;
+	height: 200px;
+	border: 2px solid #DDD;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background-color: #FEFFEC;
+	text-align: center;
+	color: #BBB;
+	font-size: 2em;
+	font-family: Arial, sans-serif;
+}
+
 .thumb {
     height: 75px;
     border: 1px solid #000;
