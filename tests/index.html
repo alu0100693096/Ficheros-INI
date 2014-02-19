@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+	<title>Mocha</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="mocha.css" />
+  
+</head>
+ 
+<body>
+    
+	<div id="mocha"></div>
+        
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+	<script src="chai.js"></script>
+    
+	<script src="mocha.js"></script>
+    
+	<script src="../ini.js"></script>  
+	<script>mocha.setup('tdd')</script>
+    
+	<script src="tests.js"></script>
+	<table class="table_out">
+      <tr><td><h1>Ficheros INI</h1></td></tr>
+      <tr><td> <div class="input" id="dragdrop"><br>Arrastre el fichero aquí...</div></td></tr>
+      <tr><td><br><input type="file" id="fileinput" /></td></tr>
+    </table>
+    <div id="out" class="hidden">
+    <table class="table_out">
+      <tr><th>Original</th><th>Tokens</th></tr>
+      <tr>
+        <td class="input_content">
+          <pre class="input" id="initialinput"></pre>
+        </td>
+        <td class="output_content">
+          <pre class="output" id="finaloutput"></pre>
+        </td>
+      </tr>
+    </table>
+<!-- Plantilla para generar el contenido de la lista -->
+<script type="text/html" id="template_outList">
+<ol class="ol_output"> <% _.each(tokens, function(token, index){ %> <li class = "<%= token.type %>"> <span> <%= matches[index] %> </span></li> <% }); %> </ol>
+</script>
+</body>
+
+</html>
