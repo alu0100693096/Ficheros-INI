@@ -29,7 +29,10 @@ table.table_out {
   border-collapse: separate;
 }
 
-table.table_out td.content {
+table.table_out td        { vertical-align: top; text-align: left;} 
+table.table_out th        { vertical-align: top; font-size: 150%;} 
+
+table.table_out td.output_content {
    padding: 15px;
    border-style: none;
    background-color: white;
@@ -41,6 +44,7 @@ table.table_out td.input_content {
    border-style: none;
    background-color: white;
    border-radius: 20px;
+   text-shadow: rgba(0, 0, 0, 0.15) 0.1em 0.1em 0.2em;
 }
 
 
@@ -56,9 +60,6 @@ h1 {
   margin-left:auto; 
   margin-right:auto;
 }
-
-table.table_out td        { vertical-align: top; text-align: left;} 
-table.table_out th        { vertical-align: top; font-size: 150%;} 
 
 /*td.td_output  {max-height: 800px; display: block; overflow-y: scroll; overflow-x: hidden; } */
 

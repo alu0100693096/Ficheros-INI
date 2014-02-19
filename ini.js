@@ -43,15 +43,17 @@ function tokensToString(tokens) {
    for(var i in tokens) {
 	 matches.push(JSON.stringify(tokens[i], undefined, 2));
    }
-
-   return output_template({tokens: tokens, matches: matches});
+   
+   return output_template({tokens: tokens, matches: matches}).substr(1); // El substr(1) Eliminar el \n generado por la plantilla.
 }
 
 function lexer(input) {
+  var multiline      = /([^\\]*)\\/;
   var blanks		 = /^\s+/;
   var iniheader		 = /^\[([^\t\n]+)\](?=\s+)/;
   var comments		 = /^[;#](.*)/;
   var nameEqualValue = /^([^=;\r\n]+)=([^;\r\n]*)/;
+  var anycontent     = /^\r\n(.*)/;
   var any			 = /^(.|\n)+/;
 
   var out = [];
@@ -72,6 +74,17 @@ function lexer(input) {
 	}
 	else if (m = nameEqualValue.exec(input)) {
 	  input = input.substr(m.index+m[0].length);
+	  
+	  var m2;
+	  while(m2 = multiline.exec(m[2]))
+	  {
+	    var nextline_match = anycontent.exec(input);
+	    input = input.substr(nextline_match[0].length);
+		
+		m[2] = m2[1] + nextline_match[1];
+		m[0] = m[0] + nextline_match[1];
+	  }
+	  
 	  out.push({ type: 'nameEqualValue', match: m });
 	}
 	else if (m = any.exec(input)) {
