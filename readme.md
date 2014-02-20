@@ -6,7 +6,8 @@ El objetivo de la práctica consiste en realizar un pequeño parser para fichero
 ## 2. Acceso a la página web ##
 Se puede acceder a la página web de *GitHub Pages* alojada en el siguiente enlace:
 
-- **{Enlaces aquí}**
+- [http://alu0100693096.github.io/Ficheros-INI/](http://alu0100693096.github.io/Ficheros-INI/)
+- [http://alu0100693096.github.io/Ficheros-INI/tests](http://alu0100693096.github.io/Ficheros-INI/tests)
 
 ## 3. Reparto del trabajo ##
 
